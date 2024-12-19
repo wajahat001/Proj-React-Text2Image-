@@ -1,5 +1,7 @@
 import { createContext } from "react";
+import { useState } from "react";
 export const AppContext = createContext()
+
 
 const AppContextProvider = (props) =>{
     const [user, setUser] = useState(null); //useStste is null because the user is not login yet
