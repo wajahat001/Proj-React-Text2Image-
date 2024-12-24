@@ -25,7 +25,32 @@ const registerUser = async (req, res)=>{
 
     }catch(error){
        console.log(error)
-       res.json({success:false, message : error.message})
+       return res.json({success:false, message : error.message})
     }
 }
+
+const loginUser = async (req, res )=>{
+    try {
+        const {email,password} = req.body
+        const user = await userModel.findOne({email})
+
+        if(!user){
+            return res.json({sucess:false, message: 'User does not exit'})
+        }
+            const isMatch = await bcrypt.compare(password,user.password)
+
+            if(isMatch){
+                const token = jwt.sign({id: user._id},process.env.JWT_SECRET)
+                res.json({success:true,token,user: {name : user.name}})
+            }else {
+                return res.json({success:false, message : error.message})
+            }
+
+        
+    } catch (error) {
+        console.log(error)
+       return res.json({success:false, message : error.message})
+    }
+}
+
 
