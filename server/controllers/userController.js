@@ -63,4 +63,34 @@ const loginUser = async (req, res) => {
   }
 };
 
-export { registerUser, loginUser };
+const userCredits = async (req, res) => {
+    try {
+        const { userId } = req.body;
+
+        // Check if userId is provided in the request body
+        if (!userId) {
+            return res.status(400).json({ success: false, message: "User ID is required" });
+        }
+
+        // Find the user by ID
+        const user = await userModel.findById(userId);
+
+        // If user is not found, return a 404
+        if (!user) {
+            return res.status(404).json({ success: false, message: "User not found" });
+        }
+
+        // Return the user details and credits
+        res.status(200).json({
+            success: true,
+            credits: user.creditBalance,
+            user: { name: user.name }
+        });
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ success: false, message: "An error occurred while fetching user credits", error: error.message });
+    }
+};
+
+
+export { registerUser, loginUser, userCredits };
