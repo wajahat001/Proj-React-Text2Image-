@@ -24,6 +24,12 @@ export const generateImage = async (req, res) => {
             return res.status(400).json({ success: false, message: 'No Credit Balance', creditBalance: user.creditBalance });
         }
 
+<<<<<<< HEAD
+=======
+        // Update the user's credit balance before making the API call
+        await userModel.findByIdAndUpdate(user._id, { creditBalance: user.creditBalance - 1 });
+
+>>>>>>> e03e37ca09562ba34e4f0708344523042d178c0e
         // Prepare form data for API request
         const formData = new FormData();
         formData.append('prompt', prompt);
@@ -41,14 +47,18 @@ export const generateImage = async (req, res) => {
         const base64Image = Buffer.from(data, 'binary').toString('base64');
         const resultImage = `data:image/png;base64,${base64Image}`;
 
+<<<<<<< HEAD
         // Update the user's credit balance after successful image generation
         await userModel.findByIdAndUpdate(user._id, { creditBalance: user.creditBalance - 1 });
 
+=======
+>>>>>>> e03e37ca09562ba34e4f0708344523042d178c0e
         // Respond with the generated image and updated credit balance
         res.json({ success: true, message: 'Image Generated', creditBalance: user.creditBalance - 1, resultImage });
 
     } catch (error) {
         console.error(error);
+<<<<<<< HEAD
 
         // Return a more specific error message based on the type of error
         if (error.response) {
@@ -62,6 +72,8 @@ export const generateImage = async (req, res) => {
         }
 
         // Unknown error
+=======
+>>>>>>> e03e37ca09562ba34e4f0708344523042d178c0e
         res.status(500).json({ success: false, message: 'An error occurred while generating the image', error: error.message });
     }
 };

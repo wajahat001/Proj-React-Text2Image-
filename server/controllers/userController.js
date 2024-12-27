@@ -19,17 +19,28 @@ const registerUser = async (req, res) => {
     const userData = {
       name,
       email,
+<<<<<<< HEAD
       password: hashedPassword
     }
+=======
+      password: hashedPassword,
+    };
+>>>>>>> e03e37ca09562ba34e4f0708344523042d178c0e
 
     // Save user to database
     const newUser = new userModel(userData);
     const user = await newUser.save();
 
     // Generate JWT token
+<<<<<<< HEAD
     const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET)
 
     res.json({ success: true, token, user: { name: user.name } })
+=======
+    const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET);
+
+    res.json({ success: true, token, user: { name: user.name } });
+>>>>>>> e03e37ca09562ba34e4f0708344523042d178c0e
   } catch (error) {
     console.error(error);
     return res.json({ success: false, message: error.message });
@@ -52,7 +63,11 @@ const loginUser = async (req, res) => {
 
     if (isMatch) {
       // Generate JWT token
+<<<<<<< HEAD
       const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET);
+=======
+      const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET, { expiresIn: "1d" });
+>>>>>>> e03e37ca09562ba34e4f0708344523042d178c0e
       res.json({ success: true, token, user: { name: user.name } });
     } else {
       return res.json({ success: false, message: "Invalid credentials" });

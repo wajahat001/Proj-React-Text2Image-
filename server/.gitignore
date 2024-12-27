@@ -1,5 +1,8 @@
 .env
+<<<<<<< HEAD
 node_modules
+=======
+>>>>>>> e03e37ca09562ba34e4f0708344523042d178c0e
 .architect
 bootstrap.css
 bootstrap.js

@@ -3,8 +3,13 @@ import { assets } from "../assets/assets";
 
 const Result = () => {
   const [image, setImage] = useState(assets.sample_img_1);
+<<<<<<< HEAD
   const [isImageLoaded, setIsImageLoaded] = useState(true);
   const [loading, setLoading] = useState(true);
+=======
+  const [isImageLoaded, setIsImageLoaded] = useState(false);
+  const [loading, setLoading] = useState(false);
+>>>>>>> e03e37ca09562ba34e4f0708344523042d178c0e
   const [input, setInput] = useState("");
 
   const onSubmitHandler = async (e) => {};

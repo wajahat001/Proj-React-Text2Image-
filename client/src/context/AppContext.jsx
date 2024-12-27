@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { createContext, useState, useEffect } from "react";
 
 // Create the context for the app
@@ -21,11 +22,22 @@ const AppContextProvider = (props) => {
   }, [token]);
 
   // The context value object that will be shared with children
+=======
+import { createContext } from "react";
+import { useState } from "react";
+export const AppContext = createContext();
+
+const AppContextProvider = (props) => {
+  const [user, setUser] = useState(null); //useStste is null because the user is not login yet
+  const [showLogin, setShowLogin] = useState(false);
+
+>>>>>>> e03e37ca09562ba34e4f0708344523042d178c0e
   const value = {
     user,
     setUser,
     showLogin,
     setShowLogin,
+<<<<<<< HEAD
     token,
     setToken,
     credit,
@@ -37,6 +49,11 @@ const AppContextProvider = (props) => {
     <AppContext.Provider value={value}>
       {props.children}
     </AppContext.Provider>
+=======
+  };
+  return (
+    <AppContext.Provider value={value}>{props.children}</AppContext.Provider>
+>>>>>>> e03e37ca09562ba34e4f0708344523042d178c0e
   );
 };
 

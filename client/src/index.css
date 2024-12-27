@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 
+=======
+>>>>>>> e03e37ca09562ba34e4f0708344523042d178c0e
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -7,9 +10,12 @@
 
 
 
+<<<<<<< HEAD
 *{
     font-family: Outfit;
 }
+=======
+>>>>>>> e03e37ca09562ba34e4f0708344523042d178c0e
 .placeholder-color{
     color: #e0e0e0;
     font-weight: 300;

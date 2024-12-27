@@ -2,7 +2,11 @@ import React from "react";
 import { assets } from "../assets/assets";
 import { Link, useNavigate } from "react-router-dom";
 import { useContext } from "react";
+<<<<<<< HEAD
 import { AppContext } from "../context/AppContext.jsx";
+=======
+import { AppContext } from "../context/AppContext";
+>>>>>>> e03e37ca09562ba34e4f0708344523042d178c0e
 
 const Navbar = () => {
   const { user, setShowLogin } = useContext(AppContext);
