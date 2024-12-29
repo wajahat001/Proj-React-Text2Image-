@@ -1,12 +1,11 @@
 import React from "react"
 import { useContext, useState } from 'react'
 import { assets } from '../assets/assets'
-import { motion } from "motion/react"
 import { AppContext } from '../context/AppContext'
 
 const Result = () => {
 
-  const [image, setImage] = useState(assets.sample_img_1)
+  const [image, setImage] = useState(assets.image_1)
   const [isImageLoaded, setIsImageLoaded] = useState(false)
   const [loading, setLoading] = useState(false)
   const [input, setInput] = useState('')
@@ -29,7 +28,7 @@ const Result = () => {
 
 
   return (
-    <motion.form
+    <form
       initial={{ opacity: 0.2, y: 100 }}
       transition={{ duration: 1 }}
       whileInView={{ opacity: 1, y: 0 }}
@@ -65,7 +64,7 @@ const Result = () => {
        cursor-pointer'>Download</a>
         </div>
       }
-    </motion.form>
+    </form>
   )
 }
 
