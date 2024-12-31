@@ -8,7 +8,7 @@ const Footer = () => {
       <img src={assets.logo} alt="" width={100} />
 
       <p className="flex-1 border-l border-gray-400 pl-4 text-sm text-gray-500 max-sm:hidden">
-        Copyright @Wajahat047 | All right reserved.</p>
+        Copyright @Wajahat47-Obaid69 | All right reserved.</p>
 
       <div className="flex gap-2.5">
         <img src={assets.facebook_icon} alt="" width={35} />

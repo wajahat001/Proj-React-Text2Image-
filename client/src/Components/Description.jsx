@@ -20,14 +20,12 @@ const Description = () => {
           <p className="text-gray-600 mb-4">Easily bring your ideas to life with our free AI
             image generator. Whether you need stunning visuals or
             unique imagery, our tool transforms your text into
-            eye-catching images with just a few clicks. Imagine it,
-            describe it, and watch it come to life instantly.</p>
-          <p className="text-gray-600">Simply type in a text prompt, and our cutting-edge
+            eye-catching images with just a few clicks. </p>
+          <p className="text-gray-600">Simply type in a tet prompt, and our cutting-edge
             AI will generate high-quality image in seconds. From
             product visuals to character designs and portraits,
             even concepts that dont yet exist can be visualized
-            effortlessly. Powered by advanced AI technology, the
-            creative possibilities are limitless!</p>
+            effortlessly. </p>
         </div>
       </div>
     </div>
