@@ -1,8 +1,6 @@
-Text to Image Converter
+#Description
 
-Description
-
-A full-stack web application that converts text into images. The frontend is built using React, and the backend is developed with Express.js, forming a complete MERN (MongoDB, Express, React, Node.js) stack project.
+##A full-stack web application that converts text into images. The frontend is built using React, and the backend is developed with Express.js, forming a complete MERN (MongoDB, Express, React, Node.js) stack project.
 
 Features
 
